@@ -7,6 +7,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { ButtonComponent } from './components/button/button.component';
 import { LoginComponent } from './pages/login/login.component';
 import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './pages/home/home.component';
 
 // declaramos novos componentes aqui
 /* 
@@ -17,7 +18,7 @@ import { FormsModule } from '@angular/forms';
 */
 
 @NgModule({
-  declarations: [AppComponent, ButtonComponent, LoginComponent],
+  declarations: [AppComponent, ButtonComponent, LoginComponent, HomeComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],
