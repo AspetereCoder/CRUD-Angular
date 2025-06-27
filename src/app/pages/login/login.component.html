@@ -5,8 +5,8 @@
             <h1 class="title">Angular CRUD</h1>
             <h2 class="subtitle">Seu app de gestão de usuários</h2>
 
-            <input type="text" placeholder="Digite seu nome" class="input-form">
-            <app-button btnText="Acessar"></app-button>
+            <input [(ngModel)]="userName" [ngModelOptions]="{standalone: true}" type="text" placeholder="Digite seu nome" class="input-form">
+            <app-button btnText="Acessar" (click)="login()"></app-button>
         </form>
     </div>
 </div>
