@@ -1,21 +1,15 @@
-# Crud de usuários em Angular
+# Crud de usuários em Angular v17
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.17.
+Um CRUD feito no framework Angular versão 17.
 
-## Development server
+## Rodando a aplicação
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Clone este repositório em sua máquina e navegue até ele, rode o comando `ng serve` ou `ng s`, após isso vá ate seu navegador e digite o link: `http://localhost:4200`.
 
 
 ## Ferramentas utilizadas
 - Bootstrap
 - Angular Material UI
-
-
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
