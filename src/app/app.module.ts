@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './pages/home/home.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { MatIconModule } from '@angular/material/icon';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 // declaramos novos componentes aqui
 /* 
 
@@ -26,7 +27,7 @@ import { MatIconModule } from '@angular/material/icon';
     HomeComponent,
     MenuComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, MatIconModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, MatIconModule, MatProgressSpinnerModule],
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],
 })
