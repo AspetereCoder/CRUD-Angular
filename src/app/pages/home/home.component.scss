@@ -1,0 +1,41 @@
+.title {
+    font-size: 26px;
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+    color: var(--primary-color)
+}
+
+.subtitle {
+    font-size: 18px;
+    margin: 0;
+    padding: 26px 0px 14px 0px;
+    color: var(--gray-color);
+
+    span {
+        color: var(--primary-color);
+        font-weight: 500;
+    }
+}
+
+.card-info {
+    background-color: #fafafa;
+    padding: 14px 16px 0px 16px;
+    border-radius: 6px;
+    box-shadow: 0px 0px 6px 3px #0a0a0a30;
+}
+
+// spinner card
+.card-text {
+    font-size: 17px;
+    font-weight: 500;
+    color: #888;
+    margin-bottom: 18px;
+}
+
+.card-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0a0a0a;
+    margin-bottom: 16px;
+}
