@@ -39,3 +39,49 @@
     color: #0a0a0a;
     margin-bottom: 16px;
 }
+
+.spinner-info {
+    font-size: 14px;
+    font-weight: 500;
+    color: #797979;
+    text-align: center;
+    position: relative;
+    top: -62px;
+    margin: 0 auto;
+}
+
+// right side
+.profile-container {
+    text-align: center;
+
+    h4 {
+        font-size: 18px;
+        color: #474747;
+        font-weight: 500;
+        margin: 8px 0px 0px;    
+    }
+
+    h5 {
+        color: #6d6d6d;
+        font-weight: 600;
+    }
+}
+
+.quote {
+    font-style: italic;
+    font-weight: 300;
+    color: #0a0a0a;
+}
+
+li {
+    font-weight: 500;
+    padding: 14px 0px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #dbdbdb;
+    mat-icon {
+        margin-right: 14px;
+        font-size: 22px;
+    }
+}
