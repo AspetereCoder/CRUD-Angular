@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Observable } from 'rxjs';
 
+import { User } from '../interfaces/user';
+
 @Injectable({
   providedIn: 'root',
 })
@@ -11,18 +13,18 @@ export class UsersService {
   getAllUsers() {
     return this.databaseStore
       .collection('users', (user) => user.orderBy('name'))
-      .valueChanges({ idField: 'firebaseId' }) as Observable<any[]>;
+      .valueChanges({ idField: 'firebaseId' }) as Observable<User[]>;
   }
 
-  addUser(user: any) {
-    return this.databaseStore.collection("users").add(user);
+  addUser(user: User) {
+    return this.databaseStore.collection('users').add(user);
   }
 
-  updateUser(userId: string, data: any) {
-    return this.databaseStore.collection("users").doc(userId).update(data);
+  updateUser(userId: string, data: User) {
+    return this.databaseStore.collection('users').doc(userId).update(data);
   }
 
   deleteUser(userId: string) {
-    return this.databaseStore.collection("users").doc(userId).delete();
+    return this.databaseStore.collection('users').doc(userId).delete();
   }
 }
