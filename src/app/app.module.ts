@@ -11,6 +11,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { ButtonComponent } from './components/button/button.component';
 import { HomeComponent } from './pages/home/home.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { CrudComponent } from './pages/crud/crud.component';
 
 // angular material theme
 import { MatIconModule } from '@angular/material/icon';
@@ -37,6 +38,7 @@ import { environment } from '../environments/environment';
     LoginComponent,
     HomeComponent,
     MenuComponent,
+    CrudComponent,
   ],
   imports: [
     BrowserModule,
