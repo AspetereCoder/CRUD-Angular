@@ -12,13 +12,11 @@ import { MenuComponent } from './components/menu/menu.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
-// firebase 
-import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
-import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+// firebase
+import { AngularFireModule } from '@angular/fire/compat';
 
 // firebase environment
 import { environment } from '../environments/environment';
-
 
 // declaramos novos componentes aqui
 /* 
@@ -36,8 +34,15 @@ import { environment } from '../environments/environment';
     HomeComponent,
     MenuComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, MatIconModule, MatProgressSpinnerModule],
-  providers: [provideAnimationsAsync(), provideFirebaseApp(() => initializeApp(environment.firebaseConfig)), provideFirestore(() => getFirestore())],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    MatIconModule,
+    MatProgressSpinnerModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+  ],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
