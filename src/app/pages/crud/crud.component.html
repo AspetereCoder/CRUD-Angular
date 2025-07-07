@@ -1,2 +1,24 @@
 <app-menu></app-menu>
-<h1>Crud</h1>
+
+<div class="container-fluid pt-3">
+
+    <div class="row">
+        <div class="col-12">
+            <h1 class="title">Cadastro de Usuários</h1>
+            <h2 class="subtitle">Adicione, edite ou exclua usuários</h2>
+        </div>
+    </div>
+
+    <div class="row mt-2">
+        <div class="col-12">
+            <app-button class="float-end" btnText="Cadastrar"></app-button>
+
+            <mat-form-field>
+                <mat-label>Filter</mat-label>
+                <input matInput (keyup)="applyFilter($event)" placeholder="usuário1" #input>
+            </mat-form-field>
+
+        </div>
+    </div>
+
+</div>

@@ -16,6 +16,8 @@ import { CrudComponent } from './pages/crud/crud.component';
 // angular material theme
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 // firebase
 import { AngularFireModule } from '@angular/fire/compat';
@@ -47,6 +49,8 @@ import { environment } from '../environments/environment';
     MatIconModule,
     MatProgressSpinnerModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
+    MatFormFieldModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
