@@ -21,6 +21,12 @@
             <!--Users table-->
             <table class="mat-elevation-z8" mat-table [dataSource]="dataSource" matSort>
 
+                <!-- Id Column -->
+                <ng-container matColumnDef="id">
+                    <th class="th-table" mat-header-cell *matHeaderCellDef mat-sort-header> Id </th>
+                    <td class="td-table" mat-cell *matCellDef="let user; let i = index"> {{i + 1}} </td>
+                </ng-container>
+
                 <!-- Name Column -->
                 <ng-container matColumnDef="name">
                     <th class="th-table" mat-header-cell *matHeaderCellDef mat-sort-header> Nome </th>

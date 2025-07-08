@@ -10,7 +10,7 @@ import { UsersService } from '../../services/users.service';
 })
 export class CrudComponent {
   dataSource: MatTableDataSource<User>;
-  displayedColumns: string[] = ['name', 'role', 'email', 'benefits', 'actions'];
+  displayedColumns: string[] = ['id', 'name', 'role', 'email', 'benefits', 'actions'];
 
   constructor(private usersService: UsersService) {}
 
