@@ -25,8 +25,8 @@ export class CrudComponent {
         this.dataSource = new MatTableDataSource(response);
       },
       error: (err) => {
-        console.log("Erro:", err);
-      }
+        console.log('Erro:', err);
+      },
     });
   }
 
