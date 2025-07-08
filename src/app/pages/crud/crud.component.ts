@@ -12,7 +12,14 @@ import { MatSort } from '@angular/material/sort';
 })
 export class CrudComponent {
   dataSource: MatTableDataSource<User>;
-  displayedColumns: string[] = ['id', 'name', 'role', 'email', 'benefits', 'actions'];
+  displayedColumns: string[] = [
+    'id',
+    'name',
+    'role',
+    'email',
+    'benefits',
+    'actions',
+  ];
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
@@ -34,6 +41,7 @@ export class CrudComponent {
       next: (response: User[]) => {
         // shows the users from firebase db on the screen
         this.dataSource = new MatTableDataSource(response);
+        console.log(response);
         // reload the paginator
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
@@ -42,6 +50,17 @@ export class CrudComponent {
         console.log('Erro:', err);
       },
     });
+  }
+
+  deleteUser(userId: string) {
+    this.usersService
+      .deleteUser(userId)
+      .then((response: any) => {
+        window.alert('Usuário excluido com sucesso.');
+      })
+      .catch(() => {
+        window.alert('Erro ao excluir o usuário.');
+      });
   }
 
   // users filter
