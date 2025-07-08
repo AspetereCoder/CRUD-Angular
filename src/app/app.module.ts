@@ -12,6 +12,7 @@ import { ButtonComponent } from './components/button/button.component';
 import { HomeComponent } from './pages/home/home.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { CrudComponent } from './pages/crud/crud.component';
+import { ModalFormUserComponent } from './components/modal-form-user/modal-form-user.component';
 
 // angular material theme
 import { MatIconModule } from '@angular/material/icon';
@@ -22,6 +23,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
 
 // firebase
 import { AngularFireModule } from '@angular/fire/compat';
@@ -45,6 +47,7 @@ import { environment } from '../environments/environment';
     HomeComponent,
     MenuComponent,
     CrudComponent,
+    ModalFormUserComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,6 +61,7 @@ import { environment } from '../environments/environment';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
+    MatDialogModule,
     BrowserAnimationsModule,
   ],
   providers: [],
