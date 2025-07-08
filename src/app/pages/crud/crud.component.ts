@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { User } from '../../interfaces/user';
 import { UsersService } from '../../services/users.service';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
 
 @Component({
   selector: 'app-crud',
@@ -12,10 +14,19 @@ export class CrudComponent {
   dataSource: MatTableDataSource<User>;
   displayedColumns: string[] = ['id', 'name', 'role', 'email', 'benefits', 'actions'];
 
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
+
   constructor(private usersService: UsersService) {}
 
   ngOnInit() {
     this.getUsersList();
+  }
+
+  // initialize the paginator and sort functionality
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
   }
 
   getUsersList() {
@@ -23,6 +34,9 @@ export class CrudComponent {
       next: (response: User[]) => {
         // shows the users from firebase db on the screen
         this.dataSource = new MatTableDataSource(response);
+        // reload the paginator
+        this.dataSource.paginator = this.paginator;
+        this.dataSource.sort = this.sort;
       },
       error: (err) => {
         console.log('Erro:', err);

@@ -19,7 +19,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
-import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // firebase
@@ -55,8 +56,8 @@ import { environment } from '../environments/environment';
     MatFormFieldModule,
     MatInputModule,
     MatTableModule,
-    MatPaginator,
     MatPaginatorModule,
+    MatSortModule,
     BrowserAnimationsModule,
   ],
   providers: [],
