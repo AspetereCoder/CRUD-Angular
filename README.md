@@ -2,6 +2,10 @@
 
 Um CRUD feito no framework Angular versão 17.
 
+![tela de login do app](project-imgs/login.png)
+![tela home do app](project-imgs/home.png)
+![tela de cadastro de usuarios](project-imgs/crud.png)
+
 ## Configurando Firebase
 
 Para rodar este projeto, você precisa configurar o Firebase:
