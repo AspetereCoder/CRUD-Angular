@@ -20,7 +20,7 @@ export class UsersService {
     return this.databaseStore.collection('users').add(user);
   }
 
-  updateUser(userId: string, data: User) {
+  updateUser(userId: string | undefined, data: User) {
     return this.databaseStore.collection('users').doc(userId).update(data);
   }
 
