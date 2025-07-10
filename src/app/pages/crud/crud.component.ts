@@ -103,7 +103,7 @@ export class CrudComponent {
   openUserInfoModal(user: User) {
     this.dialog.open(UserInfoModalComponent, {
       width: '700px',
-      height: '400px',
+      height: '330px',
       data: user,
     });
 
