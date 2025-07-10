@@ -1,9 +1,10 @@
 // angular
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MatSelectModule } from '@angular/material/select';
 
 // user components
 import { LoginComponent } from './pages/login/login.component';
@@ -62,6 +63,8 @@ import { environment } from '../environments/environment';
     MatSortModule,
     MatDialogModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

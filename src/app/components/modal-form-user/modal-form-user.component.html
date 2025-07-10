@@ -1,2 +1,88 @@
-<h2>Adicionar Usuário</h2>
-<p>Adicione seus usuários aqui</p>
+<div class="container-fluid p-3">
+    <mat-icon class="float-end hover" (click)="closeModal()">close</mat-icon>
+
+    <h1 class="title">Formulário de usuário</h1>
+    <h2 class="subtitle">Preencha o formulário para salvar o usuário</h2>
+
+    <form class="row" [formGroup]="userForm">
+        <!--name input-->
+        <div class="col-12 col-md-6 mb-2">
+            <mat-form-field class="w-100">
+                <mat-label>Nome</mat-label>
+                <input type="text" matInput formControlName="name"
+                placeholder="Digite seu nome">
+
+                @if (userForm.controls["name"].invalid) {
+                    <mat-error>Digite um nome</mat-error>
+                }
+            </mat-form-field>
+        </div>
+
+        <!--email input-->
+        <div class="col-12 col-md-6 mb-2">
+            <mat-form-field class="w-100">
+                <mat-label>Email</mat-label>
+                <input type="email" matInput formControlName="email"
+                placeholder="usuario@email.com">
+
+                @if (userForm.controls["email"].invalid) {
+                    <mat-error>Digite um e-mail válido</mat-error>
+                }
+            </mat-form-field>
+        </div>
+
+        <!--sector input-->
+        <div class="col-12 col-md-6 mb-2">
+            <mat-form-field class="w-100">
+                <mat-label>Setor</mat-label>
+                <input type="text" matInput formControlName="sector"
+                placeholder="Setor">
+
+                @if (userForm.controls["sector"].invalid) {
+                    <mat-error>Digite um setor</mat-error>
+                }
+            </mat-form-field>
+        </div>
+
+        <!--role input-->
+        <div class="col-12 col-md-6 mb-2">
+            <mat-form-field class="w-100">
+                <mat-label>Cargo</mat-label>
+                <input type="text" matInput formControlName="role"
+                placeholder="Ex: Gerente">
+
+                @if (userForm.controls["role"].invalid) {
+                    <mat-error>Digite um cargo</mat-error>
+                }
+            </mat-form-field>
+        </div>
+
+        <!--Benefits-->
+        <div class="col-12 col-md-6 mb-2">
+            <!-- health plan select -->
+            <mat-form-field class="w-100">
+                <mat-label>Plano de Saúde</mat-label>
+                <mat-select>
+                    @for (plan of healthPlansList; track plan) {
+                        <mat-option [value]="plan.description">{{plan.description}}</mat-option>
+                    }
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+        <div class="col-12 col-md-6 mb-2">
+            <!-- dental plan select -->
+            <mat-form-field class="w-100">
+                <mat-label>Plano Odontológico</mat-label>
+                <mat-select>
+                    @for (plan of dentalPlansList; track plan) {
+                        <mat-option [value]="plan.description">{{plan.description}}</mat-option>
+                    }
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+        <app-button btnText="Salvar" class="text-center"></app-button>
+
+    </form>
+</div>
