@@ -62,7 +62,7 @@
             <!-- health plan select -->
             <mat-form-field class="w-100">
                 <mat-label>Plano de Saúde</mat-label>
-                <mat-select>
+                <mat-select formControlName="healthPlan">
                     @for (plan of healthPlansList; track plan) {
                         <mat-option [value]="plan.description">{{plan.description}}</mat-option>
                     }
@@ -74,7 +74,7 @@
             <!-- dental plan select -->
             <mat-form-field class="w-100">
                 <mat-label>Plano Odontológico</mat-label>
-                <mat-select>
+                <mat-select formControlName="dentalPlan">
                     @for (plan of dentalPlansList; track plan) {
                         <mat-option [value]="plan.description">{{plan.description}}</mat-option>
                     }
@@ -82,7 +82,7 @@
             </mat-form-field>
         </div>
 
-        <app-button btnText="Salvar" class="text-center"></app-button>
+        <app-button btnText="Salvar" class="text-center" (click)="saveUser()"></app-button>
 
     </form>
 </div>
