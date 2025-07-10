@@ -6,6 +6,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalFormUserComponent } from '../../components/modal-form-user/modal-form-user.component';
+import { UserInfoModalComponent } from '../../components/user-info-modal/user-info-modal.component';
 
 @Component({
   selector: 'app-crud',
@@ -47,7 +48,7 @@ export class CrudComponent {
         // reload the paginator
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
-        this.paginator._intl.itemsPerPageLabel = "Itens por página:";
+        this.paginator._intl.itemsPerPageLabel = 'Itens por página:';
       },
       error: (err) => {
         console.log('Erro:', err);
@@ -93,9 +94,19 @@ export class CrudComponent {
       .open(ModalFormUserComponent, {
         width: '700px',
         height: '400px',
-        data: user
+        data: user,
       })
       .afterClosed()
       .subscribe(() => this.getUsersList());
+  }
+
+  openUserInfoModal(user: User) {
+    this.dialog.open(UserInfoModalComponent, {
+      width: '700px',
+      height: '400px',
+      data: user,
+    });
+
+    console.log('Usuario a ser exibido: ', user);
   }
 }
