@@ -1,43 +1,69 @@
 # Crud de usuários em Angular v17
 
-Um CRUD feito no framework Angular versão 17.
+Este projeto é um **CRUD de usuários** desenvolvido com o framework [Angular](https://angular.dev) versão 17, que utiliza o **Firebase Realtime Database** como back-end e **Bootstrap** juntamente com **Angular Material** para construir sua interface. Simula as quatro operações básicas de um sistema de gerenciamento de usuários: **criação, visualização, edição e exclusão**.
+
+---
+
+## 🖼️ Prévia
 
 ![tela de login do app](project-imgs/login.png)
 ![tela home do app](project-imgs/home.png)
 ![tela de cadastro de usuarios](project-imgs/crud.png)
 
-## Configurando Firebase
+## 📖 Sobre o Projeto
 
-Para rodar este projeto, você precisa configurar o Firebase:
+Este projeto foi desenvolvido com o intuito de demonstrar habilidades em:
 
-1. Acesse [Firebase Console](https://console.firebase.google.com/).
+- Criação de projetos Angualar modernos
+- Integração com **Firebase**
+- Uso de **Angular Material UI** para criação de componentes responsivos
+- Aplicações do tipo CRUD completas.
+
+## ⚙️ Rodando o Projeto
+
+> **Atenção**: você precisará configurar o Firebase manualmente para rodar este projeto.
+
+### 1. Clone este repositório localmente:
+```bash
+git clone https://github.com/AspetereCoder/CRUD-Angular.git
+cd <diretorio>
+```
+
+### 2. Instale as dependências:
+```bash
+npm install
+```
+
+### 3. Configure o Firebase
+
+1. Acesse o [Firebase Console](https://console.firebase.google.com/).
 2. Crie um novo projeto.
-3. Vá em "Criação" e crie um "Firestore Database".
+3. Vá em "Criação" e crie um "Realtime Database".
 4. Vá em "Configurações do Projeto" > "Geral" > "Seus aplicativos" e crie um novo app a partir do npm.
 5. Copie os dados de configuração do seu "firebaseConfig"
-6. Vá no arquivo `src/environments/environment.example.ts` e preencha os dados no campo "firebaseConfig".
-7. Renomeie o arquivo `environment.example.ts` para `environment.ts`.
+6. Crie uma coleção chamada ``users``
+7. Vá no arquivo `src/environments/environment.example.ts` e preencha os dados no campo "firebaseConfig".
+8. Renomeie o arquivo `environment.example.ts` para `environment.ts`.
 
-## Rodando a aplicação
+### 4. Inicie a aplicação
+No diretório do projeto, rode o comando: ``ng serve`` E acesse no navegador a url: ``http://localhost:4200``
 
-Clone este repositório em sua máquina e navegue até ele, rode o comando `ng serve` ou `ng s`, após isso vá ate seu navegador e digite o link: `http://localhost:4200`.
+## ⚒️ Tecnologias utilizadas
 
-## Ferramentas utilizadas
-
+- Angular 17
 - Bootstrap
 - Angular Material UI
-- Firestore Database
+- Firebase Realtime Database
+- TypeScript
+- RxJS
+- Scss
 
+## 💡 Funcionalidades
+- ✅ Listagem de usuários
+- ✅ Criação de usuários
+- ✅ Edição dos dados de usuários existentes
+- ✅ Exclusão de Usuários
+- ✅ Gerenciamento de benefícios de usuários
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
+## 📄 Licença
+Este projeto está licenciado sob a licença MIT. Para mais informações acesse o arquivo [LICENSE](LICENSE)
