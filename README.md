@@ -43,7 +43,7 @@ npm install
 5. Copie os dados de configuração do seu "firebaseConfig"
 6. Crie uma coleção chamada ``users``
 7. Vá no arquivo `src/environments/environment.example.ts` e preencha os dados no campo "firebaseConfig".
-8. Renomeie o arquivo `environment.example.ts` para `environment.ts`.
+8. Renomeie o arquivo `environment.example.ts` para `environment.development.ts`.
 
 ### 4. Inicie a aplicação
 No diretório do projeto, rode o comando: ``ng serve`` E acesse no navegador a url: ``http://localhost:4200``

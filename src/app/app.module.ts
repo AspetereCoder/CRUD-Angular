@@ -30,7 +30,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { AngularFireModule } from '@angular/fire/compat';
 
 // firebase environment
-import { environment } from '../environments/environment';
+import { environment } from '../environments/environment.development';
 
 // declaramos novos componentes aqui
 /* 
