@@ -13,6 +13,12 @@ export class LoginComponent {
 
   login() {
     // salvando o usuario no session storage do browser
+
+    if (!this.userName) {
+      // if userName is empty then it's value is setted to anonymous
+      this.userName = "Anônimo";
+    }
+
     sessionStorage.setItem('user', this.userName);
 
     this.route.navigate(['home']);
