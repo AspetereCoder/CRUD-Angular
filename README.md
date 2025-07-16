@@ -26,7 +26,7 @@ Este projeto foi desenvolvido com o intuito de demonstrar habilidades em:
 ### 1. Clone este repositório localmente:
 ```bash
 git clone https://github.com/AspetereCoder/CRUD-Angular.git
-cd <diretorio>
+cd CRUD-Angular
 ```
 
 ### 2. Instale as dependências:
