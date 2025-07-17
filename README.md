@@ -6,7 +6,10 @@ Este projeto é um **CRUD de usuários** desenvolvido com o framework [Angular](
 
 ## 🖼️ Prévia
 
-![tela de login do app](project-imgs/login.png)
+<div align="center">
+    <img src="project-imgs/login.png">
+</div>
+
 ![tela home do app](project-imgs/home.png)
 ![tela de cadastro de usuarios](project-imgs/crud.png)
 
